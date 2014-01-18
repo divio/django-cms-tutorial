@@ -135,4 +135,4 @@ Let's login and add some content:
 * switch to the `structure` mode and start adding plugins. A good one to start with is the "Text"-Plugin.
 
 
-Let's continue with [Step 2 - Placeholder.md](https://github.com/Chive/djangocms-tutorial/blob/new/Step.md)!
+Let's continue with [Step 2 - Placeholder.md](https://github.com/Chive/djangocms-tutorial/blob/new/Step%201%20-%20Placeholder.md)!
