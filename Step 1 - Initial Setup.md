@@ -60,18 +60,20 @@ If you want to be safe, use the settings below:
 
 ```bash
 $ Database configuration (in URL format) [default sqlite://locahost/project.db]: [ENTER]
-$ django CMS version (choices: 2.4, stable, beta, develop) [default stable]: develop
-$ Django version (choices: 1.4, 1.5, stable) [default stable]: 1.5
+$ django CMS version (choices: 2.4, stable, beta, develop) [default stable]: beta
+$ Django version (choices: 1.4, 1.5, 1.6, stable) [default 1.5]: [ENTER]
 $ Activate Django I18N / L10N setting (choices: yes, no) [default yes]: [ENTER]
 $ Install and configure reversion support (choices: yes, no) [default yes]: [ENTER]
 $ Languages to enable. Option can be provided multiple times, or as a comma separated list: en,de
-$ Optional default timezone [default America/Chicago]: Europe/Zurich
+$ Optional default time zone [default America/Chicago]: Europe/Zurich
 $ Activate Django timezone support (choices: yes, no) [default yes]: [ENTER]
 $ Activate CMS permission management (choices: yes, no) [default yes]: [ENTER]
 
+Creating admin user
 $ Username: admin
-$ Email address: admin@example.com 
+$ Email address: email@example.com
 $ Password: admin
+$ Password (again): admin
 ```
 
 ### Create a template
