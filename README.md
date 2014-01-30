@@ -1,8 +1,8 @@
 django CMS Tutorial
 ===================
 
-Welcome to the django CMS Tutorial. This tutorial should guide you through the first basic steps with
-django CMS all the way up to adding your own plugins and apps and extending the CMS' models itself! 
+Welcome to the django CMS 3 Tutorial. This tutorial should guide you through the first basic steps with
+django CMS all the way up to adding your own plugins and apps and extending the CMS' models itself!
 
 Before we start
 ---------------

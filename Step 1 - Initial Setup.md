@@ -27,41 +27,40 @@ $ mkdir demo && cd demo
 Let's set up the virtual environment and install [`aldryn-installer`](https://github.com/nephila/aldryn-installer):
 
 ```bash
-$ virtualenv env --no-site-packages
+$ virtualenv env
 $ source env/bin/activate
 (env) $ pip install "git+https://github.com/nephila/aldryn-installer#egg=aldryn-installer"
 ```
 
-***Note:*** If you're using Windows, activate the virtual environment by doing this instead:
-
-```
-> env\Scripts\activate
-```
+> ***Note:*** If you're using Windows, activate the virtual environment by doing this instead:
+> ```bat
+> > env\Scripts\activate
+> ```
 
 ### Install django CMS
 
-We're now about to install django CMS. We'll do that using previously installed `aldryn-installer` since it's easy and hassle-free. Just follow the interactive setup, don't worry if it takes a while :)
+We're now about to install django CMS. We'll do that using the previously installed `aldryn-installer` since it's easy and hassle-free. Just follow the interactive wizard, don't worry if it takes a while :)
 
-```
+```bash
 (env) $ aldryn -p . my_demo
 ```
 
-***Note:*** Again, if you're using Windows you'll have to make sure your python files are associated correctly. Open up a shell with admin rights:
+> ***Note:*** Again, if you're using Windows you'll have to make sure your python files are associated correctly. Open up a shell with admin rights:
+> ```bat
+> C:\Windows\system32> assoc .py=Python.file
+> .py=Python.file
 
-```
-C:\Windows\system32> assoc .py=Python.file
-.py=Python.file
+> C:\Windows\system32> ftype Python.File="C:\Users\Username\workspace\demo\env\Scripts\python.exe" "%1" %*
+> Python.File="C:\Users\Username\workspace\demo\env\Scripts\python.exe" "%1" %*
+> ```
 
-C:\Windows\system32> ftype Python.File="C:\Users\Username\workspace\demo\env\Scripts\python.exe" "%1" %*
-Python.File="C:\Users\Username\workspace\demo\env\Scripts\python.exe" "%1" %*
-```
+Feel free to answer the questions to your liking, but please note that this tutorial was designed after the following setup. If you chose other settings, it may not always quite fit! To be on the safe side, just use the settings below:
 
-If you want to be safe, use the settings below:
 
 ```bash
 $ Database configuration (in URL format) [default sqlite://locahost/project.db]: [ENTER]
-$ django CMS version (choices: 2.4, stable, beta, develop) [default stable]: beta
-$ Django version (choices: 1.4, 1.5, 1.6, stable) [default 1.5]: [ENTER]
+$ django CMS version (choices: 2.4, stable, beta, develop) [default stable]: develop
+$ Django version (choices: 1.4, 1.5, 1.6, stable) [default 1.5]: 1.6
 $ Activate Django I18N / L10N setting (choices: yes, no) [default yes]: [ENTER]
 $ Install and configure reversion support (choices: yes, no) [default yes]: [ENTER]
 $ Languages to enable. Option can be provided multiple times, or as a comma separated list: en,de
@@ -76,65 +75,20 @@ $ Password: admin
 $ Password (again): admin
 ```
 
-### Create a template
-The installer did most of the work for us, however we need to add our custom templates to the CMS. First, delete the two existing files in `demo/my_demo/templates/`. Afterwards, create these two files in that folder:
-
-**`base.html`**:
-
-```html
-{% load cms_tags sekizai_tags menu_tags %}
-<html>
-    <head>
-        {% render_block "css" %}
-    </head>
-    <body>
-        {% cms_toolbar %}
-        <ul>
-            {% show_menu 0 100 100 100 %}
-        </ul>
-        {% block content %}{% endblock %}
-        {% render_block "js" %}
-    </body>
-</html>
-```
-
-**`page.html`**:
-
-```html
-{% extends "base.html" %}
-{% load cms_tags sekizai_tags menu_tags placeholder_tags %}
-
-{% block content %}
-    {% placeholder content %}
-{% endblock %}
-```
-
-Next, open up `my_demo/settings.py`, look for `CMS_TEMPLATES` and include our newly created `page.html` template:
-
-```html
-CMS_TEMPLATES = (
-    ('page.html', 'Page'),
-)
-```
-
 ### Let's run it
 
-Start the server:
+That's it! The installer took care of setting up you're whole environment, you're now ready to start the server:
 
 ```bash
 (env) $ python manage.py runserver
 ```
 
-Now you can open [http://127.0.0.1:8000/](http://127.0.0.1:8000/) in your browser and should see the django CMS welcome screen.
+Now you can open [http://localhost:8000/](http://localhost:8000/) and should be presented with your brand new django CMS homepage!
 
 Congratulations, you now have a fully functional CMS! Awesome job!
 
-Let's login and add some content:
+To log in, append `?edit` to the URL and hit enter. This will enable the toolbar, from where you can log in and manage your website. Switch to Draft Mode to add and edit content!
 
-* click on the [Switch to edit mode](http://localhost:8000/?edit) and login with the user you created earlier.
-* click on the add page link. Enter "home" as title of your new page and save.
-* workaround: open "example.com" -> "Pages …" and click on the publish icon of your newly created page.
-* switch to the `structure` mode and start adding plugins. A good one to start with is the "Text"-Plugin.
+Try to switch between Live and Draft view, between structure and content mode, add plugins, move them around and delete them again. Go mess with it and see how awesome it is!
 
-
-Let's continue with [Step 2 - Placeholder.md](https://github.com/Chive/djangocms-tutorial/blob/new/Step%201%20-%20Placeholder.md)!
+In the next step we're going to have a look at Templates & Placeholder: [Step 2 - Placeholder.md](https://github.com/Chive/djangocms-tutorial/blob/new/Step%202%20-%20Templates%20%26%20Placeholder.md)
