@@ -1,5 +1,5 @@
-django CMS Tutorial - Step 3
-============================
+Step 3 - CMS Plugins
+====================
 
 In this part of the tutorial we're going to take the django poll app and modify it in a way to use it in the CMS.
 

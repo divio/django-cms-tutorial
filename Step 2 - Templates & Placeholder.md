@@ -1,5 +1,5 @@
-django CMS Tutorial - Step 2
-============================
+Step 2 - Templates & Placeholder
+================================
 
 In this part of the tutorial we're going to tell you a thing or two about (static) placeholders and we're also going to show how you can make your own HTML templates CMS ready.
 
