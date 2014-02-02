@@ -40,7 +40,7 @@ Static Placeholders
 
 A placeholder's content is different for every page. But let's say you want to have a section on your website which should be the same on every single page you use a template with that placeholder, e.g. a footer block. It would be nice if you could edit your footer through your browser, but not if you'd had to do it on every single page.
 
-That's why there are static placeholders (formerly stacks)
+That's why there are static placeholders.
 
 Static placeholders an easy way to display the same content on multiple locations on your website. Static placeholders act almost like normal placeholders, except for the fact that once a static placeholder is created and you added content to it, it will be saved globally. Even when you remove the static placeholders you can reuse it at sometime later again.
 
@@ -49,8 +49,6 @@ You can use a template tag to display a placeholder in a template without the ne
 ```python
 {% load cms_tags %} {% static_placeholder "footer" %}
 ```
-
-> **Note:** It is mandatory to use static placeholders in your apphook apps instead of show_placeholder templatetags
 
 Let's create a footer!
 ----------------------
@@ -77,4 +75,4 @@ Here's a basic example:
 
 You should definitely check out the CMS' documentation on [navigation, menus and breadcrumbs](http://docs.django-cms.org/en/develop/getting_started/navigation.html#navigation).
 
-[In step 3 we're going to talk about CMS Plugins!](https://github.com/Chive/djangocms-tutorial/blob/new/Step%203%20-%20CMS%20Plugins.md)
+[In step 3 we're going to talk about CMS Plugins!](https://github.com/Chive/djangocms-tutorial/blob/master/Step%203%20-%20CMS%20Plugins.md)

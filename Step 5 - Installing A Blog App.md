@@ -39,4 +39,4 @@ Run your server, add a new page for the blog and edit it. Go to ‘Advanced Sett
 
 Furthermore, check the toolbar. You can now select "Blog" > "Add Blog Post..." from it and add a new blog post directly from there (you should totally do that!)
 
-Since the toolbar integration is totally awesome, we're going to integrate our poll app into the toolbar in [step 6](https://github.com/Chive/djangocms-tutorial/blob/new/Step%206%20-%20Toolbar%20Integration.md).
+Since the toolbar integration is totally awesome, we're going to integrate our poll app into the toolbar in [step 6](https://github.com/Chive/djangocms-tutorial/blob/master/Step%206%20-%20Toolbar%20Integration.md).

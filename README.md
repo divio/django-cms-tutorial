@@ -13,4 +13,4 @@ Please make sure you have installed the following prerequisites:
 
 Start
 -----
-To get started, continue to [Step 1 - Inital Setup.md](https://github.com/Chive/djangocms-tutorial/blob/new/Step%201%20-%20Initial%20Setup.md) to get going!
+To get started, continue to [Step 1 - Inital Setup](https://github.com/Chive/djangocms-tutorial/blob/master/Step%201%20-%20Initial%20Setup.md)!

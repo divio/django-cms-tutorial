@@ -91,4 +91,4 @@ To log in, append `?edit` to the URL and hit enter. This will enable the toolbar
 
 Try to switch between Live and Draft view, between structure and content mode, add plugins, move them around and delete them again. Go mess with it and see how awesome it is!
 
-In the next step we're going to have a look at Templates & Placeholder: [Step 2 - Placeholder.md](https://github.com/Chive/djangocms-tutorial/blob/new/Step%202%20-%20Templates%20%26%20Placeholder.md)
+In the next step we're going to have a look at Templates & Placeholder: [Step 2 - Placeholder.md](https://github.com/Chive/djangocms-tutorial/blob/master/Step%202%20-%20Templates%20%26%20Placeholder.md)

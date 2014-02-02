@@ -27,4 +27,4 @@ You could now remove the inclusion of the polls urls in your project's `urls.py`
 
 Run your server, add a new page for your app and edit it. Go to ‘Advanced Settings’ and choose ‘Polls App’ for ‘Application’. This will hook your app into that very page. For these changes to take effect, you will have to restart your server. If you reload your page now, you should be presented with your poll app!
 
-[Click here to get to step 5](https://github.com/Chive/djangocms-tutorial/blob/new/Step%205%20-%20Installing%20A%20Blog%20App.md) where we're going to install a blog app!
+[Click here to get to step 5](https://github.com/Chive/djangocms-tutorial/blob/master/Step%205%20-%20Installing%20A%20Blog%20App.md) where we're going to install a blog app!
