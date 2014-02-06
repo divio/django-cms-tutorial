@@ -24,12 +24,12 @@ $ mkdir demo && cd demo
 
 ### Setup virtual environment
 
-Let's set up the virtual environment and install [`aldryn-installer`](https://github.com/nephila/aldryn-installer):
+Let's set up the virtual environment and install [`djangocms-installer`](https://github.com/nephila/djangocms-installer):
 
 ```bash
 $ virtualenv env
 $ source env/bin/activate
-(env) $ pip install "git+https://github.com/nephila/aldryn-installer#egg=aldryn-installer"
+(env) $ pip install djangocms-installer
 ```
 
 > ***Note:*** If you're using Windows, activate the virtual environment by doing this instead:
@@ -39,10 +39,10 @@ $ source env/bin/activate
 
 ### Install django CMS
 
-We're now about to install django CMS. We'll do that using the previously installed `aldryn-installer` since it's easy and hassle-free. Just follow the interactive wizard, don't worry if it takes a while :)
+We're now about to install django CMS. We'll do that using the previously installed `djangocms-installer` since it's easy and hassle-free. Just follow the interactive wizard, don't worry if it takes a while :)
 
 ```bash
-(env) $ aldryn -p . my_demo
+(env) $ djangocms -p . my_demo
 ```
 
 > ***Note:*** Again, if you're using Windows you'll have to make sure your python files are associated correctly. Open up a shell with admin rights:
