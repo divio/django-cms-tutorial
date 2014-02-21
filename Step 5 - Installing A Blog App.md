@@ -12,14 +12,14 @@ $ source env/bin/activate
 Add the app and its requirements below to `INSTALLED_APPS` in `settings.py`:
 
 ```python
-INSTALLED_APPS += [
+INSTALLED_APPS += (
     'aldryn_blog',
     'django_select2',
     'djangocms_text_ckeditor',
     'easy_thumbnails',
     'filer',
     'taggit',
-]
+)
 
 ```
 Since we added a new app, we need to update our database:
