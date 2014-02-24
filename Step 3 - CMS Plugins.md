@@ -67,7 +67,7 @@ class CMSPollPlugin(CMSPluginBase):
         context.update({'instance': instance})
         return context
 
-plugin_pool.register_plugin(PollPlugin)  # register the plugin
+plugin_pool.register_plugin(CMSPollPlugin)  # register the plugin
 ```
 
 > **Note**: All plugin classes must inherit from `cms.plugin_base.CMSPluginBase` and must register themselves with the `cms.plugin_pool.plugin_pool`.
@@ -95,7 +95,7 @@ The template is located at `polls/templates/polls/plugin.html` and should look s
 Quite some work done by now, let's add it to our project. Add your polls plugin to the `INSTALLED_APPS` in your projects `settings.py`:
 
 ```python
-INSTALLED_APPS += ['polls']
+INSTALLED_APPS += ('polls')
 ```
 
 Secondly, add the following line to the project's `urls.py`:
