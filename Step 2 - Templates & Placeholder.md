@@ -42,7 +42,7 @@ A placeholder's content is different for every page. But let's say you want to h
 
 That's why there are static placeholders.
 
-Static placeholders an easy way to display the same content on multiple locations on your website. Static placeholders act almost like normal placeholders, except for the fact that once a static placeholder is created and you added content to it, it will be saved globally. Even when you remove the static placeholders you can reuse it at sometime later again.
+Static placeholders are an easy way to display the same content on multiple locations on your website. Static placeholders act almost like normal placeholders, except for the fact that once a static placeholder is created and you added content to it, it will be saved globally. Even when you remove the static placeholders you can reuse it at sometime later again.
 
 You can use a template tag to display a placeholder in a template without the need for an actual placeholder in your models:
 
@@ -55,7 +55,7 @@ Let's create a footer!
 
 But that's theory, let's implement a footer!
 
-Since we want our footer on every single page, we should add it to our base template (`my_demo/templates/base.html`). Open it up and a new static_placeholder (e.g. `footer`) at the bottom of the html body (or wherever you want it to be, you don't have to obey some piece of text!).
+Since we want our footer on every single page, we should add it to our base template (`my_demo/templates/base.html`). Open it up and add a new static_placeholder (e.g. `footer`) at the bottom of the html body (or wherever you want it to be, you don't have to obey some piece of text!).
 
 Save the template and go back to your browser. Change to draft and then structure mode and fill in content into your footer! After you've saved it, go check out the other pages on your websites to see that the footer appears there too!
 
