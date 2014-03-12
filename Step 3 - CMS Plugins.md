@@ -84,7 +84,7 @@ The template is located at `polls/templates/polls/plugin.html` and should look s
     {% csrf_token %}
     {% for choice in instance.poll.choice_set.all %}
         <input type="radio" name="choice" id="choice{{ forloop.counter }}" value="{{ choice.id }}" />
-        <label for="choice{{ forloop.counter }}">{{ choice.choice }}</label><br />
+        <label for="choice{{ forloop.counter }}">{{ choice.choice_text }}</label><br />
     {% endfor %}
     <input type="submit" value="Vote" />
 </form>
