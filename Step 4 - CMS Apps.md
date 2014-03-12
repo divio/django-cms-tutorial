@@ -24,7 +24,9 @@ apphook_pool.register(PollsApp)  # register your app
 ```
 
 You could now remove the inclusion of the polls urls in your project's `urls.py`.
+> **Note**: If you want to use polls both as an app and as a plugin, you do not want to remove the inclusion!
 
 Run your server, add a new page for your app and edit it. Go to ‘Advanced Settings’ and choose ‘Polls App’ for ‘Application’. This will hook your app into that very page. For these changes to take effect, you will have to restart your server. If you reload your page now, you should be presented with your poll app!
+> **Note**: If you removed the inclusion of the polls urls in your project's `urls.py`, set up the namespace in 'application instance name' in the 'Advanced Settings'. Although, it is not recommended to use a namespace this way, as the end user can still edit it!
 
 [Click here to get to step 5](https://github.com/Chive/djangocms-tutorial/blob/master/Step%205%20-%20Installing%20A%20Blog%20App.md) where we're going to install a blog app!
