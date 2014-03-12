@@ -80,7 +80,7 @@ The template is located at `polls/templates/polls/plugin.html` and should look s
 ```html
 <h1>{{ instance.poll.question }}</h1>
 
-<form action="{% url polls.views.vote instance.poll.id %}" method="post">
+<form action="{% url 'polls:vote' instance.poll.id %}" method="post">
     {% csrf_token %}
     {% for choice in instance.poll.choice_set.all %}
         <input type="radio" name="choice" id="choice{{ forloop.counter }}" value="{{ choice.id }}" />
@@ -101,7 +101,7 @@ INSTALLED_APPS += ('polls')
 Secondly, add the following line to the project's `urls.py`:
 
 ```python
-url(r'^polls/', include('polls.urls')),
+url(r'^polls/', include('polls.urls', namespace='polls')),
 ```
 
 > **Note**: CMS Patterns (`url(r'^', include('cms.urls')),`) must always be last entry in the urls.py!
