@@ -1,4 +1,4 @@
-django CMS Tutorial - Step 5
+django CMS Tutorial - Step 6
 ============================
 Extending the Toolbar
 ---------------------
