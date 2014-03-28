@@ -59,7 +59,7 @@ Feel free to answer the questions to your liking, but please note that this tuto
 
 ```bash
 $ Database configuration (in URL format) [default sqlite://locahost/project.db]: [ENTER]
-$ django CMS version (choices: 2.4, stable, beta, develop) [default stable]: beta
+$ django CMS version (choices: 2.4, stable, rc, develop) [default stable]: rc
 $ Django version (choices: 1.4, 1.5, 1.6, stable) [default 1.5]: 1.5
 $ Activate Django I18N / L10N setting (choices: yes, no) [default yes]: [ENTER]
 $ Install and configure reversion support (choices: yes, no) [default yes]: [ENTER]
