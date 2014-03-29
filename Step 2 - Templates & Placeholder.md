@@ -73,6 +73,6 @@ Here's a basic example:
 </ul>
 ```
 
-You should definitely check out the CMS' documentation on [navigation, menus and breadcrumbs](http://docs.django-cms.org/en/develop/getting_started/navigation.html#navigation).
+You should definitely check out the CMS' documentation on [navigation, menus and breadcrumbs](http://docs.django-cms.org/en/develop/getting_started/resources/navigation.html).
 
 [In step 3 we're going to talk about CMS Plugins!](https://github.com/Chive/djangocms-tutorial/blob/master/Step%203%20-%20CMS%20Plugins.md)
