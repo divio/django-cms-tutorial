@@ -14,6 +14,7 @@ Add the app and its requirements below to `INSTALLED_APPS` in `settings.py`:
 ```python
 INSTALLED_APPS += (
     'aldryn_blog',
+    'aldryn_common',
     'django_select2',
     'djangocms_text_ckeditor',
     'easy_thumbnails',
