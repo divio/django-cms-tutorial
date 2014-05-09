@@ -3,6 +3,10 @@ Step 3 - CMS Plugins
 
 In this part of the tutorial we're going to take the django poll app and modify it in a way to use it in the CMS.
 
+
+Install the polls app
+---------------------
+
 You can either complete the tutorial here <https://docs.djangoproject.com/en/dev/intro/tutorial01/> or copy the folder `polls` from [Chive/django-poll-app](https://github.com/Chive/django-poll-app) to your project root.
 
 You should end up with a folder structure similar to this:
@@ -24,12 +28,47 @@ demo/
     requirements.txt
 ```
 
+Now to create the initial migrations for our app and migrate them into the database (using South):
+
+```bash
+(env) $ python manage.py schemamigration polls --initial
+(env) $ python manage.py migrate polls
+```
+
+Let's add it to our project. Add your polls plugin to the `INSTALLED_APPS` in your projects `settings.py`:
+
+```python
+INSTALLED_APPS += ('polls', )
+```
+
+Add the following line to the project's `urls.py`:
+
+```python
+url(r'^polls/', include('polls.urls', namespace='polls')),
+```
+
+At this point you should be able to add polls in admin and fill them in at `/polls/`.
+
+But we've lost our page navigation. Let's include it by extending our base template.
+
+```
+{% extends 'base.html' %}
+
+{% block content %}
+[...]
+{% endblock %}
+```
+
+So now we have integrated the standard polls app in our project. But we've not done anything django CMS specific yet. It's time to integrate!
+
+
 Our first plugin
 ----------------
 
 If you've played around with the CMS for a little, you've probably already encountered CMS Plugins. They are the objects you can fill into placeholders on your pages through the frontend (e.g. "Text", "Image" and so forth).
 
-We're now going to modify the django poll app so we can embed a poll easily into a CMS page.
+We're now going to extend the django poll app so we can embed a poll easily into any CMS page. For simplicitys sake, we'll modify the polls app. But these things could also live in a seperate python package. So it is possible to integrate 3rd party apps into django CMS without modifying them.
+
 
 ### The Plugin Model
 
@@ -46,6 +85,7 @@ class PollPlugin(CMSPlugin):
 ```
 
 > **Note:** django CMS plugin models must inherit from `cms.models.CMSPlugin` (or a subclass thereof) and not `models.Model`.
+
 
 ### The Plugin Class
 Now create a file `cms_plugins.py` in the same folder your models.py is in. The plugin class is responsible for providing django CMS with the necessary information to render your plugin.
@@ -72,6 +112,9 @@ plugin_pool.register_plugin(CMSPollPlugin)  # register the plugin
 
 > **Note**: All plugin classes must inherit from `cms.plugin_base.CMSPluginBase` and must register themselves with the `cms.plugin_pool.plugin_pool`.
 
+> **Note:** Don't name the plugin model and the plugin admin the same. Otherwise things get confusing.
+
+
 ### The Template
 You probably noticed the render_template attribute in the above plugin class. In order for our plugin to work, we need to set it up first.
 
@@ -90,26 +133,12 @@ The template is located at `polls/templates/polls/plugin.html` and should look s
 </form>
 ```
 
-> **Note**: We don’t show the errors here, because when submitting the form you’re taken off this page to the actual voting page.
-
-Quite some work done by now, let's add it to our project. Add your polls plugin to the `INSTALLED_APPS` in your projects `settings.py`:
-
-```python
-INSTALLED_APPS += ('polls', )
-```
-
-Secondly, add the following line to the project's `urls.py`:
-
-```python
-url(r'^polls/', include('polls.urls', namespace='polls')),
-```
-
 > **Note**: CMS Patterns (`url(r'^', include('cms.urls')),`) must always be last entry in the urls.py!
 
-Now to create the initial migrations for our app and migrate them into the database (using South):
+Now to create a database migration to add the plugin table (using South):
 
 ```bash
-(env) $ python manage.py schemamigration polls --initial
+(env) $ python manage.py schemamigration polls --auto
 (env) $ python manage.py migrate polls
 ```
 
