@@ -115,4 +115,8 @@ Now to create the initial migrations for our app and migrate them into the datab
 
 Finally, run the server and go visit <http://localhost:8000/polls/>. Yay!
 
+
+And add the Polls CMS Plugin on a page.
+
+
 Next up is step 4: [CMS Apps](https://github.com/Chive/djangocms-tutorial/blob/master/Step%204%20-%20CMS%20Apps.md)
