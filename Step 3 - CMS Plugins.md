@@ -101,7 +101,7 @@ INSTALLED_APPS += ('polls', )
 Secondly, add the following line to the project's `urls.py`:
 
 ```python
-url(r'^polls/', include('polls.urls')),
+url(r'^polls/', include('polls.urls', namespace='polls')),
 ```
 
 > **Note**: CMS Patterns (`url(r'^', include('cms.urls')),`) must always be last entry in the urls.py!
