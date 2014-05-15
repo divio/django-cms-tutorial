@@ -2,13 +2,16 @@ Step 1 - Initial Setup
 ======================
 Good to see you! Now let's get started by setting up our environment.
 
+<!---
 Preparing your workstation
 --------------------------
+
 In order to keep an overview about view packages are installed, we create a virtual environment for every project. Make sure you have the latest version installed:
 
 ```bash
 $ pip install --upgrade virtualenv
 ```
+--->
 
 Installing the CMS
 ------------------
