@@ -22,6 +22,15 @@ INSTALLED_APPS += (
     'taggit',
 )
 
+One of the dependencies is ``easy_thumbnails``. It has already switched to Django 1.7 style migrations and needs some extra configuration to work with South:
+
+```python
+SOUTH_MIGRATION_MODULES = {
+    'easy_thumbnails': 'easy_thumbnails.south_migrations',
+}
+```
+
+
 ```
 Since we added a new app, we need to update our database:
 
