@@ -7,7 +7,7 @@ In the new version 3.0 you can add and remove items to the toolbar. This allows 
 ### Registering
 There are two ways to control what gets shown in the toolbar.
 
-One is the `CMS_TOOLBARS`. This gives you full control over which classes are loaded, but requires that you specify them all manually.
+One is the `CMS_TOOLBARS` setting. This gives you full control over which classes are loaded, but requires that you specify them all manually.
 
 The other is to provide `cms_toolbar.py` files in your apps, which will be automatically loaded as long `CMS_TOOLBARS` is not set (or set to `None`).
 
