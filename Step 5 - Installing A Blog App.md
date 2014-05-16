@@ -32,7 +32,6 @@ SOUTH_MIGRATION_MODULES = {
 ```
 
 
-```
 Since we added a new app, we need to update our database:
 
 ```bash
