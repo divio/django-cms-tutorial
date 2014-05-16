@@ -21,6 +21,7 @@ INSTALLED_APPS += (
     'filer',
     'taggit',
 )
+``
 
 One of the dependencies is ``easy_thumbnails``. It has already switched to Django 1.7 style migrations and needs some extra configuration to work with South:
 
