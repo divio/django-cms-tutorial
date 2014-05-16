@@ -61,17 +61,18 @@ Feel free to answer the questions to your liking, but please note that this tuto
 
 
 ```bash
-$ Database configuration (in URL format) [default sqlite://locahost/project.db]: [ENTER]
-$ django CMS version (choices: 2.4, stable, rc, develop) [default stable]: rc
-$ Django version (choices: 1.4, 1.5, 1.6, stable) [default 1.5]: 1.5
-$ Activate Django I18N / L10N setting (choices: yes, no) [default yes]: [ENTER]
-$ Install and configure reversion support (choices: yes, no) [default yes]: [ENTER]
-$ Languages to enable. Option can be provided multiple times, or as a comma separated list: en,de
-$ Optional default time zone [default America/Chicago]: Europe/Zurich
-$ Activate Django timezone support (choices: yes, no) [default yes]: [ENTER]
-$ Activate CMS permission management (choices: yes, no) [default yes]: [ENTER]
-$ Use Twitter Bootstrap Theme (choices: yes, no) [default no]: yes
-$ Load a starting page with examples after installation (choices: yes, no) [default no]: yes
+$ djangocms -p . mysite
+Database configuration (in URL format) [default sqlite://localhost/project.db]:
+django CMS version (choices: 2.4, 3.0, stable, develop) [default stable]:
+Django version (choices: 1.4, 1.5, 1.6, stable) [default stable]:
+Activate Django I18N / L10N setting (choices: yes, no) [default yes]:
+Install and configure reversion support (choices: yes, no) [default yes]:
+Languages to enable. Option can be provided multiple times, or as a comma separated list: en,de
+Optional default time zone [default America/Chicago]:
+Activate Django timezone support (choices: yes, no) [default yes]:
+Activate CMS permission management (choices: yes, no) [default yes]:
+Use Twitter Bootstrap Theme (choices: yes, no) [default no]: yes
+Load a starting page with examples after installation (choices: yes, no) [default no]: yes
 
 Creating admin user
 $ Username: admin
