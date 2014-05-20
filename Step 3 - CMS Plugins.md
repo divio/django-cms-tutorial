@@ -74,7 +74,7 @@ If you've played around with the CMS for a little, you've probably already encou
 
 We're now going to extend the django poll app so we can embed a poll easily into any CMS page. We'll put this code in a separate package in our project. This allows integrating 3rd party apps without having to fork them. It would also be possible to add this code directly into the django-polls app to make it integrate out of the box.
 
-Create a new package at the project root called ``djangocms``.
+Create a new package at the project root called ``djangocms_polls``.
 
 ### The Plugin Model
 
