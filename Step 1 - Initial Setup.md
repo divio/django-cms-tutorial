@@ -72,6 +72,7 @@ Optional default time zone [default America/Chicago]:
 Activate Django timezone support (choices: yes, no) [default yes]:
 Activate CMS permission management (choices: yes, no) [default yes]:
 Use Twitter Bootstrap Theme (choices: yes, no) [default no]: yes
+Use custom template set [default no]:
 Load a starting page with examples after installation (choices: yes, no) [default no]: yes
 
 Creating admin user
