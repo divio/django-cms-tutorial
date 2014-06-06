@@ -41,6 +41,13 @@ Add the following line to the project's `urls.py`:
 url(r'^polls/', include('polls.urls', namespace='polls')),
 ```
 
+Make sure this line before the line for the django-cms urls, or else django-cms will try to interperet the polls url as a slug, fail, and return a 404.
+
+```python
+url(r'^polls/', include('polls.urls', namespace='polls')),
+url(r'^', include('cms.urls')),
+```
+
 Now run the migrations using south.
 
 ```bash
