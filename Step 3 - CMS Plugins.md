@@ -89,6 +89,8 @@ In your poll application’s `models.py` add the following:
 
 ```python
 from cms.models import CMSPlugin
+from django.db import models
+from polls.models import Poll
 
 class PollPlugin(CMSPlugin):
     poll = models.ForeignKey(Poll)
