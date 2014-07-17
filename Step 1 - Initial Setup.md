@@ -84,7 +84,7 @@ $ Password (again): admin
 
 ### Let's run it
 
-That's it! The installer took care of setting up you're whole environment, you're now ready to start the server:
+That's it! The installer took care of setting up your whole environment, you're now ready to start the server:
 
 ```bash
 (env) $ python manage.py runserver
