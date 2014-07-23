@@ -86,6 +86,6 @@ Here's a basic example:
 
 If you chose "bootstrap" while setting up with djangocms-installer, the menu will already be there and ``templates/menu.html`` will already contain a version that uses bootstrap compatible markup.
 
-You should definitely check out the CMS' documentation on [navigation, menus and breadcrumbs](http://docs.django-cms.org/en/develop/getting_started/resources/navigation.html).
+You should definitely check out the CMS' documentation on [navigation, menus and breadcrumbs](http://django-cms.readthedocs.org/en/latest/basic_reference/navigation.html).
 
 [In step 3 we're going to talk about CMS Plugins!](https://github.com/Chive/djangocms-tutorial/blob/master/Step%203%20-%20CMS%20Plugins.md)
