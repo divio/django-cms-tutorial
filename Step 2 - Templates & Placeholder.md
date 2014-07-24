@@ -74,7 +74,7 @@ Save the template and go back to your browser. Change to draft and then structur
 Rendering Menus
 ---------------
 
-In order to render your the CMS' menu in your template you can use the [`show_menu`](http://docs.django-cms.org/en/develop/getting_started/navigation.html#show-menu) tag.
+In order to render the CMS' menu in your template you can use the [`show_menu`](http://docs.django-cms.org/en/develop/getting_started/navigation.html#show-menu) tag.
 
 Here's a basic example:
 ```html
