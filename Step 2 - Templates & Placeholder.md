@@ -68,7 +68,9 @@ Since we want our footer on every single page, we should add it to our base temp
 ```
 
 
-Save the template and go back to your browser. Change to draft and then structure mode and fill in content into your footer! After you've saved it, go check out the other pages on your websites to see that the footer appears there too!
+Save the template and go back to your browser. Change to draft and then structure mode and fill in content into your footer! (Adding a so called 'text plugin' or other plugin elements is easy: Just open the menu button of the footer element and scroll down to the entry e.g.  'text'.)
+
+After you've saved it, go check out the other pages on your websites to see that the footer appears there too!
 
 
 Rendering Menus
