@@ -7,7 +7,7 @@ In this part of the tutorial we're going to take the django poll app and modify 
 Install the polls app
 ---------------------
 
-``pip install -e git+ssh://git@github.com/divio/django-polls.git#egg=django-polls`` to get a version of <https://docs.djangoproject.com/en/dev/intro/tutorial01/>. This app does not have any django-cms integration yet.
+``pip install -e git+http://git@github.com/divio/django-polls.git#egg=django-polls`` to get a version of <https://docs.djangoproject.com/en/dev/intro/tutorial01/>. This app does not have any django-cms integration yet.
 
 You should end up with a folder structure similar to this:
 
