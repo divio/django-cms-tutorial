@@ -58,7 +58,7 @@ Let's create a footer!
 
 But that's theory, let's implement a footer!
 
-Since we want our footer on every single page, we should add it to our base template (`my_demo/templates/base.html`). Open it up and add a new static_placeholder (e.g. `footer`) at the bottom of the html body (or wherever you want it to be, you don't have to obey some piece of text!).
+Since we want our footer on every single page, we should add it to our base template (`src/templates/base.html`). Open it up and add a new static_placeholder (e.g. `footer`) at the bottom of the html body (or wherever you want it to be, you don't have to obey some piece of text!).
 
 ```python
 <footer>

@@ -12,19 +12,18 @@ Install the polls app
 You should end up with a folder structure similar to this:
 
 ```
-demo/
+my-site/
     env/
         src/
             django-polls/
                 polls/
+                    templates/
                     __init__.py
                     admin.py
                     models.py
-                    templates/
-                    tests.py
                     urls.py
                     views.py
-    my_site/
+    src/
     project.db
     requirements.txt
 ```
@@ -58,7 +57,7 @@ At this point you should be able to add polls in admin and fill them in at `/pol
 
 But we've lost our page navigation. Let's restore it by overriding the polls base template.
 
-add ``my_site/templates/polls/base.html``:
+add ``src/templates/polls/base.html``:
 
 ```python
 {% extends 'base.html' %}
@@ -85,7 +84,8 @@ Create a new package at the project root called ``djangocms_polls``.
 
 ### The Plugin Model
 
-In your poll application’s `models.py` add the following:
+***Note***First create a `models.py` document in your `django_polls` folder.
+Than add in your `models.py` the following:
 
 ```python
 from cms.models import CMSPlugin
@@ -136,6 +136,7 @@ plugin_pool.register_plugin(CMSPollPlugin)  # register the plugin
 You probably noticed the render_template attribute in the above plugin class. In order for our plugin to work, we need to set it up first.
 
 The template is located at `djangocms_polls/templates/djangocms_polls/poll_plugin.html` and should look something like this:
+***Note*** If it's not looking like these, create the folders and docs there!
 
 ```html
 <h1>{{ instance.poll.question }}</h1>
