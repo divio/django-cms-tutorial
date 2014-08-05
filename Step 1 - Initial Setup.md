@@ -22,7 +22,8 @@ Go back to your workspace and create a new folder for this project:
 
 ```bash
 $ cd ~/workspace    
-$ mkdir my-site && cd my-site
+$ mkdir my-site
+$ cd my-site
 ```
 
 ### Setup virtual environment
@@ -45,7 +46,7 @@ $ source env/bin/activate
 We're now about to install django CMS. We'll do that using the previously installed `djangocms-installer` since it's easy and hassle-free. Just follow the interactive wizard, don't worry if it takes a while :)
 
 ```bash
-(env) $ djangocms -p . my_site
+(env) $ djangocms -p . src
 ```
 
 > ***Note:*** Again, if you're using Windows you'll have to make sure your python files are associated correctly. Open up a shell with admin rights:
@@ -53,15 +54,15 @@ We're now about to install django CMS. We'll do that using the previously instal
 > C:\Windows\system32> assoc .py=Python.file
 > .py=Python.file
 
-> C:\Windows\system32> ftype Python.File="C:\Users\Username\workspace\demo\env\Scripts\python.exe" "%1" %*
-> Python.File="C:\Users\Username\workspace\demo\env\Scripts\python.exe" "%1" %*
+> C:\Windows\system32> ftype Python.File="C:\Users\Username\workspace\my-site\env\Scripts\python.exe" "%1" %*
+> Python.File="C:\Users\Username\workspace\my-site\env\Scripts\python.exe" "%1" %*
 > ```
 
 Feel free to answer the questions to your liking, but please note that this tutorial was designed after the following setup. If you chose other settings, it may not always quite fit! To be on the safe side, just use the settings below:
 
 
 ```bash
-$ djangocms -p . mysite
+$ djangocms -p . src
 Database configuration (in URL format) [default sqlite://localhost/project.db]:
 django CMS version (choices: 2.4, 3.0, stable, develop) [default stable]:
 Django version (choices: 1.4, 1.5, 1.6, stable) [default stable]:
