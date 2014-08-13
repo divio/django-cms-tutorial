@@ -20,6 +20,7 @@ INSTALLED_APPS += (
     'easy_thumbnails',
     'filer',
     'taggit',
+    'hvad',
 )
 ```
 
