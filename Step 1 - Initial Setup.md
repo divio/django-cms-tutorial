@@ -45,7 +45,7 @@ $ source env/bin/activate
 We're now about to install django CMS. We'll do that using the previously installed `djangocms-installer` since it's easy and hassle-free. Just follow the interactive wizard, don't worry if it takes a while :)
 
 ```bash
-(env) $ djangocms -p . my_site
+(env) $ djangocms -p . mysite
 ```
 
 > ***Note:*** Again, if you're using Windows you'll have to make sure your python files are associated correctly. Open up a shell with admin rights:
