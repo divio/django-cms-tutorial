@@ -79,9 +79,26 @@ Our first plugin
 
 If you've played around with the CMS for a little, you've probably already encountered CMS Plugins. They are the objects you can fill into placeholders on your pages through the frontend (e.g. "Text", "Image" and so forth).
 
+### Extend the Poll Plugin
+
 We're now going to extend the django poll app so we can embed a poll easily into any CMS page. We'll put this code in a separate package in our project. This allows integrating 3rd party apps without having to fork them. It would also be possible to add this code directly into the django-polls app to make it integrate out of the box.
 
-Create a new package at the project root called ``djangocms_polls``.
+Create a new package at the project root called
+
+``djangocms_polls``. 
+
+So our workspace looks like this: 
+```
+workspace/
+    env/
+    djangocms_polls/
+        __init__.py
+    my_site/
+    static/
+    project.db
+    requirements.txt
+```
+
 
 ### The Plugin Model
 
