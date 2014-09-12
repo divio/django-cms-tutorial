@@ -160,8 +160,8 @@ The template is located at `djangocms_polls/templates/djangocms_polls/poll_plugi
 <form action="{% url 'polls:vote' instance.poll.id %}" method="post">
     {% csrf_token %}
     {% for choice in instance.poll.choice_set.all %}
-        <input type="radio" name="choice" id="choice{{ forloop.counter }}" value="{{ choice.id }}" />
-        <label for="choice{{ forloop.counter }}">{{ choice.choice_text }}</label><br />
+        <input type="radio" name="choice" id="choice{{ forloop.counter }}-{{ instance.poll.id }}" value="{{ choice.id }}" />
+        <label for="choice{{ forloop.counter }}-{{ instance.poll.id }}">{{ choice.choice_text }}</label><br />
     {% endfor %}
     <input type="submit" value="Vote" />
 </form>
